@@ -12,7 +12,7 @@ const framelessPlugin = require('electron-frameless-window-plugin')
 const mainWindow = new BrowserWindow(windowOptions)
 
 framelessPlugin.plugin({
-  window: mainWindow,
+  browserWindow: mainWindow,
   fixDragRegion: false
 }) // apply to mainWindow
 ```
@@ -23,3 +23,4 @@ framelessPlugin.plugin({
 * **fixDragRegion** *(default: true)* Fix the behavior double clicking on the title bar and dragging the title bar when window is maximized
 * **noDragRegionMenu** *(default: true)* Disable to display window menu when right click on the title bar.
 * **easyHideFromFullScreen** *(default: true)* Add window instance method `.hideFromFullScreen()`. It is useful on macOS when we click the close button and want the window to be hidden instead of closed
+* **browserWindow** *(default: undefined)* The BrowserWindow instance you need to apply single.
