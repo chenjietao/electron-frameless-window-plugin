@@ -2,7 +2,13 @@ Fix the problems about electron frameless and transparent window, such as using 
 
 # Usage
 ```javascript
+// main.js
+const { app } = require('electron')
 const { plugin } = require('electron-frameless-window-plugin')
+
+app.on('ready', () => {
+  ...
+})
 
 plugin({
   setGlobal: true
@@ -10,13 +16,22 @@ plugin({
 ```
 Or
 ```javascript
-const framelessPlugin = require('electron-frameless-window-plugin')
-const mainWindow = new BrowserWindow(windowOptions)
+// app.js
+...
 
-framelessPlugin.plugin({
-  browserWindow: mainWindow,
-  fixDragRegion: false
-}) // apply to mainWindow
+function createWindow () {
+  const framelessPlugin = require('electron-frameless-window-plugin')
+  const mainWindow = new BrowserWindow(windowOptions)
+
+  framelessPlugin.plugin({
+    browserWindow: mainWindow,
+    fixDragRegion: false
+  }) // apply to mainWindow
+}
+
+app.on('ready', () => {
+  createWindow()
+})
 ```
 
 # Options
