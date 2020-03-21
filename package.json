@@ -1,0 +1,43 @@
+{
+  "name": "electron-frameless-window-plugin",
+  "version": "1.0.0",
+  "description": "fix the problems about electron frameless and transparent window, such as using maximize() can not emit 'maximize' event.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js src/",
+    "build": "webpack",
+    "test": "electron ./test/main.js"
+  },
+  "keywords": [
+    "electron",
+    "transparent",
+    "maximize",
+    "isMaximized",
+    "transparent-window",
+    "transparent-maximize",
+    "double-click-titlebar",
+    "right-click-titlebar"
+  ],
+  "author": "chenjietao",
+  "repository": {
+    "url": "https://github.com/chenjietao/electron-frameless-window-plugin"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/runtime": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "electron": "^2.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
