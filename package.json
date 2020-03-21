@@ -1,8 +1,8 @@
 {
   "name": "electron-frameless-window-plugin",
   "version": "1.0.0",
-  "description": "fix the problems about electron frameless and transparent window, such as using maximize() can not emit 'maximize' event.",
-  "main": "dist/index.js",
+  "description": "Fix the problems about electron frameless and transparent window, such as using maximize() can not emit 'maximize' event.",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint --ext .js src/",
     "build": "webpack",
