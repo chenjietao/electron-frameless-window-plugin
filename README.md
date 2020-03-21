@@ -4,7 +4,9 @@ Fix the problems about electron frameless and transparent window, such as using 
 ```javascript
 const { plugin } = require('electron-frameless-window-plugin')
 
-plugin() // apply to each window
+plugin({
+  setGlobal: true
+}) // apply to each window
 ```
 Or
 ```javascript
@@ -18,7 +20,7 @@ framelessPlugin.plugin({
 ```
 
 # Options
-* **setGlobal** *(default: true)* Apply to each window through 'browser-window-created' event
+* **setGlobal** *(default: false)* Apply to each window through 'browser-window-created' event
 * **fixTransparent** *(default: true)* Rewrite transparent window instance's methods (`.getNormalBounds()`、`.maximize()`、`.unmaximize()`、`.isMaximized()`). Fix where 'maximize' and 'unmaximize' events cannot be emitted when calling maximize() and unmaximize() methods. Also fix isMaximized() and getNormalBounds() methods.
 * **fixDragRegion** *(default: true)* Fix the behavior double clicking on the title bar and dragging the title bar when window is maximized
 * **noDragRegionMenu** *(default: true)* Disable to display window menu when right click on the title bar.
